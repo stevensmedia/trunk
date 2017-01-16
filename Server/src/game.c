@@ -701,7 +701,6 @@ notify_check(dbref target, dbref sender, const char *msg, int port, int key, int
 	mp2 = msg_ns2 = alloc_lbuf("notify_check_accents");
 	mp_utf = msg_utf = alloc_lbuf("notify_check_utf");
 #endif
-	mp_utf = msg_utf = alloc_lbuf("notify_check_utf");
 	if (!port && Nospoof(target) &&
 	    (target != sender) &&
 	    ((!Wizard(sender) || (Wizard(sender) && Immortal(target))) || (Spoof(sender) || Spoof(Owner(sender)))) &&
@@ -748,10 +747,10 @@ notify_check(dbref target, dbref sender, const char *msg, int port, int key, int
 #endif
            safe_str((char *) msg, msg_ns, &mp);
     
-#ifdef ZENTY_ANSI       
-#endif
+#ifdef ZENTY_ANSI   
         free_lbuf(msg_ns2);
-		free_lbuf(msg_utf);
+		free_lbuf(msg_utf);    
+#endif
     } else {
 	msg_ns = NULL;
     }
