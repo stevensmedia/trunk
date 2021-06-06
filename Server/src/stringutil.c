@@ -2051,4 +2051,143 @@ ucptoutf8(char *ucp)
     return myutf;
 }
 
+char
+ucs32toascii(long ucs)
+{
+    switch(ucs) {
+        case 0x2500: return '-'; /* BOX DRAWINGS LIGHT HORIZONTAL */
+        case 0x2501: return '-'; /* BOX DRAWINGS HEAVY HORIZONTAL */
+        case 0x2502: return '|'; /* BOX DRAWINGS LIGHT VERTICAL */
+        case 0x2503: return '|'; /* BOX DRAWINGS HEAVY VERTICAL */
+        case 0x2504: return '-'; /* BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL */
+        case 0x2505: return '-'; /* BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL */
+        case 0x2506: return '|'; /* BOX DRAWINGS LIGHT TRIPLE DASH VERTICAL */
+        case 0x2507: return '|'; /* BOX DRAWINGS HEAVY TRIPLE DASH VERTICAL */
+        case 0x2508: return '-'; /* BOX DRAWINGS LIGHT QUADRUPLE DASH HORIZONTAL */
+        case 0x2509: return '-'; /* BOX DRAWINGS HEAVY QUADRUPLE DASH HORIZONTAL */
+        case 0x250A: return '|'; /* BOX DRAWINGS LIGHT QUADRUPLE DASH VERTICAL */
+        case 0x250B: return '|'; /* BOX DRAWINGS HEAVY QUADRUPLE DASH VERTICAL */
+        case 0x250C: return '+'; /* BOX DRAWINGS LIGHT DOWN AND RIGHT */
+        case 0x250D: return '+'; /* BOX DRAWINGS DOWN LIGHT AND RIGHT HEAVY */
+        case 0x250E: return '+'; /* BOX DRAWINGS DOWN HEAVY AND RIGHT LIGHT */
+        case 0x250F: return '+'; /* BOX DRAWINGS HEAVY DOWN AND RIGHT */
+        case 0x2510: return '+'; /* BOX DRAWINGS LIGHT DOWN AND LEFT */
+        case 0x2511: return '+'; /* BOX DRAWINGS DOWN LIGHT AND LEFT HEAVY */
+        case 0x2512: return '+'; /* BOX DRAWINGS DOWN HEAVY AND LEFT LIGHT */
+        case 0x2513: return '+'; /* BOX DRAWINGS HEAVY DOWN AND LEFT */
+        case 0x2514: return '+'; /* BOX DRAWINGS LIGHT UP AND RIGHT */
+        case 0x2515: return '+'; /* BOX DRAWINGS UP LIGHT AND RIGHT HEAVY */
+        case 0x2516: return '+'; /* BOX DRAWINGS UP HEAVY AND RIGHT LIGHT */
+        case 0x2517: return '+'; /* BOX DRAWINGS HEAVY UP AND RIGHT */
+        case 0x2518: return '+'; /* BOX DRAWINGS LIGHT UP AND LEFT */
+        case 0x2519: return '+'; /* BOX DRAWINGS UP LIGHT AND LEFT HEAVY */
+        case 0x251A: return '+'; /* BOX DRAWINGS UP HEAVY AND LEFT LIGHT */
+        case 0x251B: return '+'; /* BOX DRAWINGS HEAVY UP AND LEFT */
+        case 0x251C: return '+'; /* BOX DRAWINGS LIGHT VERTICAL AND RIGHT */
+        case 0x251D: return '+'; /* BOX DRAWINGS VERTICAL LIGHT AND RIGHT HEAVY */
+        case 0x251E: return '+'; /* BOX DRAWINGS UP HEAVY AND RIGHT DOWN LIGHT */
+        case 0x251F: return '+'; /* BOX DRAWINGS DOWN HEAVY AND RIGHT UP LIGHT */
+        case 0x2520: return '+'; /* BOX DRAWINGS VERTICAL HEAVY AND RIGHT LIGHT */
+        case 0x2521: return '+'; /* BOX DRAWINGS DOWN LIGHT AND RIGHT UP HEAVY */
+        case 0x2522: return '+'; /* BOX DRAWINGS UP LIGHT AND RIGHT DOWN HEAVY */
+        case 0x2523: return '+'; /* BOX DRAWINGS HEAVY VERTICAL AND RIGHT */
+        case 0x2524: return '+'; /* BOX DRAWINGS LIGHT VERTICAL AND LEFT */
+        case 0x2525: return '+'; /* BOX DRAWINGS VERTICAL LIGHT AND LEFT HEAVY */
+        case 0x2526: return '+'; /* BOX DRAWINGS UP HEAVY AND LEFT DOWN LIGHT */
+        case 0x2527: return '+'; /* BOX DRAWINGS DOWN HEAVY AND LEFT UP LIGHT */
+        case 0x2528: return '+'; /* BOX DRAWINGS VERTICAL HEAVY AND LEFT LIGHT */
+        case 0x2529: return '+'; /* BOX DRAWINGS DOWN LIGHT AND LEFT UP HEAVY */
+        case 0x252A: return '+'; /* BOX DRAWINGS UP LIGHT AND LEFT DOWN HEAVY */
+        case 0x252B: return '+'; /* BOX DRAWINGS HEAVY VERTICAL AND LEFT */
+        case 0x252C: return '+'; /* BOX DRAWINGS LIGHT DOWN AND HORIZONTAL */
+        case 0x252D: return '+'; /* BOX DRAWINGS LEFT HEAVY AND RIGHT DOWN LIGHT */
+        case 0x252E: return '+'; /* BOX DRAWINGS RIGHT HEAVY AND LEFT DOWN LIGHT */
+        case 0x252F: return '+'; /* BOX DRAWINGS DOWN LIGHT AND HORIZONTAL HEAVY */
+        case 0x2530: return '+'; /* BOX DRAWINGS DOWN HEAVY AND HORIZONTAL LIGHT */
+        case 0x2531: return '+'; /* BOX DRAWINGS RIGHT LIGHT AND LEFT DOWN HEAVY */
+        case 0x2532: return '+'; /* BOX DRAWINGS LEFT LIGHT AND RIGHT DOWN HEAVY */
+        case 0x2533: return '+'; /* BOX DRAWINGS HEAVY DOWN AND HORIZONTAL */
+        case 0x2534: return '+'; /* BOX DRAWINGS LIGHT UP AND HORIZONTAL */
+        case 0x2535: return '+'; /* BOX DRAWINGS LEFT HEAVY AND RIGHT UP LIGHT */
+        case 0x2536: return '+'; /* BOX DRAWINGS RIGHT HEAVY AND LEFT UP LIGHT */
+        case 0x2537: return '+'; /* BOX DRAWINGS UP LIGHT AND HORIZONTAL HEAVY */
+        case 0x2538: return '+'; /* BOX DRAWINGS UP HEAVY AND HORIZONTAL LIGHT */
+        case 0x2539: return '+'; /* BOX DRAWINGS RIGHT LIGHT AND LEFT UP HEAVY */
+        case 0x253A: return '+'; /* BOX DRAWINGS LEFT LIGHT AND RIGHT UP HEAVY */
+        case 0x253B: return '+'; /* BOX DRAWINGS HEAVY UP AND HORIZONTAL */
+        case 0x253C: return '+'; /* BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL */
+        case 0x253D: return '+'; /* BOX DRAWINGS LEFT HEAVY AND RIGHT VERTICAL LIGHT */
+        case 0x253E: return '+'; /* BOX DRAWINGS RIGHT HEAVY AND LEFT VERTICAL LIGHT */
+        case 0x253F: return '+'; /* BOX DRAWINGS VERTICAL LIGHT AND HORIZONTAL HEAVY */
+        case 0x2540: return '+'; /* BOX DRAWINGS UP HEAVY AND DOWN HORIZONTAL LIGHT */
+        case 0x2541: return '+'; /* BOX DRAWINGS DOWN HEAVY AND UP HORIZONTAL LIGHT */
+        case 0x2542: return '+'; /* BOX DRAWINGS VERTICAL HEAVY AND HORIZONTAL LIGHT */
+        case 0x2543: return '+'; /* BOX DRAWINGS LEFT UP HEAVY AND RIGHT DOWN LIGHT */
+        case 0x2544: return '+'; /* BOX DRAWINGS RIGHT UP HEAVY AND LEFT DOWN LIGHT */
+        case 0x2545: return '+'; /* BOX DRAWINGS LEFT DOWN HEAVY AND RIGHT UP LIGHT */
+        case 0x2546: return '+'; /* BOX DRAWINGS RIGHT DOWN HEAVY AND LEFT UP LIGHT */
+        case 0x2547: return '+'; /* BOX DRAWINGS DOWN LIGHT AND UP HORIZONTAL HEAVY */
+        case 0x2548: return '+'; /* BOX DRAWINGS UP LIGHT AND DOWN HORIZONTAL HEAVY */
+        case 0x2549: return '+'; /* BOX DRAWINGS RIGHT LIGHT AND LEFT VERTICAL HEAVY */
+        case 0x254A: return '+'; /* BOX DRAWINGS LEFT LIGHT AND RIGHT VERTICAL HEAVY */
+        case 0x254B: return '+'; /* BOX DRAWINGS HEAVY VERTICAL AND HORIZONTAL */
+        case 0x254C: return '-'; /* BOX DRAWINGS LIGHT DOUBLE DASH HORIZONTAL */
+        case 0x254D: return '-'; /* BOX DRAWINGS HEAVY DOUBLE DASH HORIZONTAL */
+        case 0x254E: return '|'; /* BOX DRAWINGS LIGHT DOUBLE DASH VERTICAL */
+        case 0x254F: return '|'; /* BOX DRAWINGS HEAVY DOUBLE DASH VERTICAL */
+        case 0x2550: return '-'; /* BOX DRAWINGS DOUBLE HORIZONTAL */
+        case 0x2551: return '|'; /* BOX DRAWINGS DOUBLE VERTICAL */
+        case 0x2552: return '+'; /* BOX DRAWINGS DOWN SINGLE AND RIGHT DOUBLE */
+        case 0x2553: return '+'; /* BOX DRAWINGS DOWN DOUBLE AND RIGHT SINGLE */
+        case 0x2554: return '+'; /* BOX DRAWINGS DOUBLE DOWN AND RIGHT */
+        case 0x2555: return '+'; /* BOX DRAWINGS DOWN SINGLE AND LEFT DOUBLE */
+        case 0x2556: return '+'; /* BOX DRAWINGS DOWN DOUBLE AND LEFT SINGLE */
+        case 0x2557: return '+'; /* BOX DRAWINGS DOUBLE DOWN AND LEFT */
+        case 0x2558: return '+'; /* BOX DRAWINGS UP SINGLE AND RIGHT DOUBLE */
+        case 0x2559: return '+'; /* BOX DRAWINGS UP DOUBLE AND RIGHT SINGLE */
+        case 0x255A: return '+'; /* BOX DRAWINGS DOUBLE UP AND RIGHT */
+        case 0x255B: return '+'; /* BOX DRAWINGS UP SINGLE AND LEFT DOUBLE */
+        case 0x255C: return '+'; /* BOX DRAWINGS UP DOUBLE AND LEFT SINGLE */
+        case 0x255D: return '+'; /* BOX DRAWINGS DOUBLE UP AND LEFT */
+        case 0x255E: return '+'; /* BOX DRAWINGS VERTICAL SINGLE AND RIGHT DOUBLE */
+        case 0x255F: return '+'; /* BOX DRAWINGS VERTICAL DOUBLE AND RIGHT SINGLE */
+        case 0x2560: return '+'; /* BOX DRAWINGS DOUBLE VERTICAL AND RIGHT */
+        case 0x2561: return '+'; /* BOX DRAWINGS VERTICAL SINGLE AND LEFT DOUBLE */
+        case 0x2562: return '+'; /* BOX DRAWINGS VERTICAL DOUBLE AND LEFT SINGLE */
+        case 0x2563: return '+'; /* BOX DRAWINGS DOUBLE VERTICAL AND LEFT */
+        case 0x2564: return '+'; /* BOX DRAWINGS DOWN SINGLE AND HORIZONTAL DOUBLE */
+        case 0x2565: return '+'; /* BOX DRAWINGS DOWN DOUBLE AND HORIZONTAL SINGLE */
+        case 0x2566: return '+'; /* BOX DRAWINGS DOUBLE DOWN AND HORIZONTAL */
+        case 0x2567: return '+'; /* BOX DRAWINGS UP SINGLE AND HORIZONTAL DOUBLE */
+        case 0x2568: return '+'; /* BOX DRAWINGS UP DOUBLE AND HORIZONTAL SINGLE */
+        case 0x2569: return '+'; /* BOX DRAWINGS DOUBLE UP AND HORIZONTAL */
+        case 0x256A: return '+'; /* BOX DRAWINGS VERTICAL SINGLE AND HORIZONTAL DOUBLE */
+        case 0x256B: return '+'; /* BOX DRAWINGS VERTICAL DOUBLE AND HORIZONTAL SINGLE */
+        case 0x256C: return '+'; /* BOX DRAWINGS DOUBLE VERTICAL AND HORIZONTAL */
+        case 0x256D: return '+'; /* BOX DRAWINGS LIGHT ARC DOWN AND RIGHT */
+        case 0x256E: return '+'; /* BOX DRAWINGS LIGHT ARC DOWN AND LEFT */
+        case 0x256F: return '+'; /* BOX DRAWINGS LIGHT ARC UP AND LEFT */
+        case 0x2570: return '+'; /* BOX DRAWINGS LIGHT ARC UP AND RIGHT */
+        case 0x2571: return '/'; /* BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT */
+        case 0x2572: return '\\'; /* BOX DRAWINGS LIGHT DIAGONAL UPPER LEFT TO LOWER RIGHT */
+        case 0x2573: return 'X'; /* BOX DRAWINGS LIGHT DIAGONAL CROSS */
+        case 0x2574: return '-'; /* BOX DRAWINGS LIGHT LEFT */
+        case 0x2575: return '|'; /* BOX DRAWINGS LIGHT UP */
+        case 0x2576: return '-'; /* BOX DRAWINGS LIGHT RIGHT */
+        case 0x2577: return '|'; /* BOX DRAWINGS LIGHT DOWN */
+        case 0x2578: return '-'; /* BOX DRAWINGS HEAVY LEFT */
+        case 0x2579: return '|'; /* BOX DRAWINGS HEAVY UP */
+        case 0x257A: return '-'; /* BOX DRAWINGS HEAVY RIGHT */
+        case 0x257B: return '|'; /* BOX DRAWINGS HEAVY DOWN */
+        case 0x257C: return '-'; /* BOX DRAWINGS LIGHT LEFT AND HEAVY RIGHT */
+        case 0x257D: return '|'; /* BOX DRAWINGS LIGHT UP AND HEAVY DOWN */
+        case 0x257E: return '-'; /* BOX DRAWINGS HEAVY LEFT AND LIGHT RIGHT */
+        case 0x257F: return '|'; /* BOX DRAWINGS HEAVY UP AND LIGHT DOWN */
+        case 0x25CF: return '*'; /* BLACK CIRCLE */
+        case 0x25CC: return 'o'; /* DOTTED CIRCLE */
+        case 0x25CB: return 'o'; /* WHITE CIRCLE */
+        default:     return ' '; /* If all else fails just blank it */
+    }
+}
+
 #endif
