@@ -793,9 +793,6 @@ static const int mux_isprint[256] =
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1   // F
 };
 
-char ucptoascii(char *ucp) {
-}
-
 /******************************************************
  * This handles accents as well!
  * buff/bufptr is the ansi
